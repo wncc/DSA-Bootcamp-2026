@@ -126,9 +126,16 @@ Arithmetic and comparison operators are identical across all three. Key differen
 
 Bitwise operators (`&`, `|`, `^`, `<<`, `>>`) have identical syntax in all three. Two patterns you will use constantly in DSA:
 
-**C++ and Java**
+**C++**
 ```cpp
-if (x & 1)   // true if x is odd - faster than x % 2 == 1
+if (x & 1)   // true if x is odd (any non-zero integer treated as true) - faster than x % 2 == 1
+x = x << 1;  // multiply by 2
+x = x >> 1;  // integer divide by 2
+```
+
+**Java**
+```java
+if((x & 1) != 0 ) // true if x is odd (no implicit conversion from int to boolean unlike c++)
 x = x << 1;  // multiply by 2
 x = x >> 1;  // integer divide by 2
 ```
